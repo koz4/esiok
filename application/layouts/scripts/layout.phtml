@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head><title>Esiok</title>
+        <?php
+$this->jquery()->enable();
+?>
+        
+
+<?php echo $this->jQuery(); ?>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/css/fouc.css" type="text/css" media="all" />
+
+
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-2" />
+        <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+        <meta http-equiv="expires" content="-1" />
+        <meta http-equiv= "pragma" content="no-cache" />
+        <meta name="robots" content="all" />
+        <meta name="author" content="Owen Briggs" />
+        <meta name="description" content="Workarounds for CSS browser issues." />
+    </head><body>
+
+
+        <div id="top">
+
+            <p><h1>ESIOK - Ewidencja sprzętu i oprogramowania komputerowego.</h1></p>
+
+        </div>
+
+        <div id="left">
+
+            <p>Menu główne</p>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/index/index'?>"><p>Lista</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Licencje</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Oprogramowanie</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Zestawy</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/zestaw/index'?>"><p>Dodaj zestaw</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Edytuj</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Logowanie</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/import/index'?>"><p>Import</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/import/createform'?>"><p>Import forma</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Wyszukiwanie</p></a>
+            
+            
+
+        </div>
+
+        <div id="middle">
+            <pre>
+                <?php echo $this->layout()->content; ?>
+            </pre>
+            <div id="right">
+
+                <p>1</p>
+
+            </div>
+
+    </body>
+
+</html>
+
+
+
+
+
