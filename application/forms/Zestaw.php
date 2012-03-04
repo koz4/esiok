@@ -9,7 +9,7 @@ class Application_Form_Zestaw extends Zend_Form
             $system = $this->createElement('text', 'system');
     $system->setLabel('System operacyjny:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -22,7 +22,7 @@ class Application_Form_Zestaw extends Zend_Form
                $numer = $this->createElement('text', 'numer');
     $numer->setLabel('Numer komputera:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -33,9 +33,9 @@ class Application_Form_Zestaw extends Zend_Form
                 new Zend_Validate_StringLength(5, 100)
             ));
                $user = $this->createElement('text', 'user');
-    $user->setLabel('Nazwa u¿ytkownika:')
+    $user->setLabel('Nazwa uzytkownika:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -48,7 +48,7 @@ class Application_Form_Zestaw extends Zend_Form
                $data = $this->createElement('text', 'data');
     $data->setLabel('Data inwentaryzacji:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -61,7 +61,7 @@ class Application_Form_Zestaw extends Zend_Form
                $procesor = $this->createElement('text', 'procesor');
     $procesor->setLabel('Procesor:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -72,9 +72,9 @@ class Application_Form_Zestaw extends Zend_Form
                 new Zend_Validate_StringLength(5, 100)
             ));
                $plyta = $this->createElement('text', 'plyta');
-    $plyta->setLabel('P³yta g³ówna:')
+    $plyta->setLabel('Plyta glowna:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -87,7 +87,7 @@ class Application_Form_Zestaw extends Zend_Form
                $chipset = $this->createElement('text', 'chipset');
     $chipset->setLabel('Chipset:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -98,9 +98,9 @@ class Application_Form_Zestaw extends Zend_Form
                 new Zend_Validate_StringLength(5, 100)
             ));
                $pamiec = $this->createElement('text', 'pamiec');
-    $pamiec->setLabel('Pamiêæ:')
+    $pamiec->setLabel('Pamiec:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -113,7 +113,7 @@ class Application_Form_Zestaw extends Zend_Form
                $grafika = $this->createElement('text', 'grafika');
     $grafika->setLabel('Karta graficzna:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -124,9 +124,9 @@ class Application_Form_Zestaw extends Zend_Form
                 new Zend_Validate_StringLength(5, 100)
             ));
                $dzwiek = $this->createElement('text', 'dzwiek');
-    $dzwiek->setLabel('Karta dzwiêkowa:')
+    $dzwiek->setLabel('Karta dzwiekowa:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -139,7 +139,7 @@ class Application_Form_Zestaw extends Zend_Form
                $hdd = $this->createElement('text', 'hdd');
     $hdd->setLabel('Dysk Twardy:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -150,9 +150,9 @@ class Application_Form_Zestaw extends Zend_Form
                 new Zend_Validate_StringLength(5, 100)
             ));
                $odd = $this->createElement('text', 'odd');
-    $odd->setLabel('Napêd optyczny:')
+    $odd->setLabel('Naped optyczny:')
             ->setRequired(TRUE)
-            ->setAttrib('size', 50)
+            ->setAttrib('size', 25)
             ->addFilters(array(
                 new Zend_Filter_StringTrim(),
                 new Zend_Filter_StripNewlines(),
@@ -163,7 +163,7 @@ class Application_Form_Zestaw extends Zend_Form
                 new Zend_Validate_StringLength(5, 100)
             ));
                $rozmiar = $this->createElement('text', 'rozmiar');
-    $rozmiar->setLabel('Rozmiar ca³kowity:')
+    $rozmiar->setLabel('Rozmiar calkowity:')
             ->setRequired(TRUE)
             ->setAttrib('size', 50)
             ->addFilters(array(

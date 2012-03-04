@@ -2,7 +2,7 @@ body {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	font-family: verdana, arial, helvetica, sans-serif;
-	color: #ccc;
+	/*color: #ccc;*/
 /*	background-color: #333;*/
 	}
 a {
@@ -98,8 +98,8 @@ img {
 #top {
 	margin: 20px 20px 0px 20px;
 	padding: 10px;
-	border: 5px solid #ccc;
-	background: #666;
+	border: 1px solid #ccc;
+	background: #FAFAD2;
 	height: 100px; /* ie5win fudge begins */
 	voice-family: "\"}\"";
 	voice-family:inherit;
@@ -114,8 +114,8 @@ html>body #top {
 	left: 0px;
 	margin: 20px;
 	padding: 10px;
-	border: 5px solid #ccc;
-	background: #666;
+	border: 1px solid #ccc;
+	background: #FAFAD2;
 	width: 150px; /* ie5win fudge begins */
 	voice-family: "\"}\"";
 	voice-family:inherit;
@@ -127,8 +127,8 @@ html>body #left {
 #middle {
 	margin: 20px 190px 20px 190px;
 	padding: 10px;
-	border: 5px solid #ccc;
-/*	background: #666;*/
+	border: 1px solid #ccc;
+        background: #FAFAD2;
 	}
 #right {
 	position: absolute;
@@ -136,8 +136,8 @@ html>body #left {
 	right: 0px; /* Opera5.02 will show a space at right when there is no scroll bar */
 	margin: 20px;
 	padding: 10px;
-	border: 5px solid #ccc;
-	background: #666;
+	border: 1px solid #ccc;
+	background: #FAFAD2;
 	width: 150px; /* ie5win fudge begins */
 	voice-family: "\"}\"";
 	voice-family:inherit;
@@ -152,52 +152,48 @@ pre {
 	margin-top: 20px;
 	margin-bottom: 10px; 
 	}
+  dt {  
+        float: left;  
+        width: 200px;  
+        background: #f3f3f3;  
+        clear: both;  
+        margin-top: 10px;  
+        margin-right: 0;  
+    }  
+    dd {  
+        margin-left: 0;  
+        float: left;  
+        width: 515px;  
+        margin-top: 10px;  
+    }  
+      
+    dd input {  
+        width: 240px;  
+        text-align:left;  
+        border: 1px solid #949494;  
+    }  
+      
+    dd input[type="checkbox"] {  
+        width: 20px;  
+        text-align:left;  
+        border: 1px solid black;  
+    }  
+      
+    form {  
+        margin-bottom: 50px;  
+    }  
+            
+    #submit-label {  
+        background: white;  
+    }  
+      
+    #submit {  
+        width: 100px;  
+        text-align: center;  
+        font-weight: bold;  
+    }  
+      
+    .errors {  
+        color: red;  
+    }  
         
-#background-image
-{
-	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	font-size: 12px;
-	margin: 1px;
-	width: 480px;
-	text-align: left;
-	border-collapse: collapse;
-	background: url('table-images/blurry.jpg') 330px 59px no-repeat;
-}
-#background-image th
-{
-	padding: 12px;
-	font-weight: normal;
-	font-size: 14px;
-	color: #339;
-}
-#background-image td
-{
-	padding: 9px 12px;
-	color: #669;
-	border-top: 1px solid #fff;
-}
-#background-image tfoot td
-{
-	font-size: 11px;
-}
-#background-image tbody td
-{
-	background: url('table-images/back.png');
-}
-* html #background-image tbody td
-{
-	/* 
-	   ----------------------------
-		PUT THIS ON IE6 ONLY STYLE 
-		AS THE RULE INVALIDATES
-		YOUR STYLESHEET
-	   ----------------------------
-	*/
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='table-images/back.png',sizingMethod='crop');
-	background: none;
-}	
-#background-image tbody tr:hover td
-{
-	color: #339;
-	background: none;
-}

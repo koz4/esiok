@@ -1,16 +1,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head><title>Esiok</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>      
         <?php
-$this->jquery()->enable();
-?>
-        
+        //$this->jquery()->enable();
+        ?>
 
-<?php echo $this->jQuery(); ?>
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" />
+
+        <?php //echo $this->jQuery(); ?>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/ui-lightness/jquery-ui.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/css/fouc.css" type="text/css" media="all" />
 
+        <script>
+            $(document).ready(function(){
+                $('td').css('border','1px solid #FF8C00');
+                $('tr:even').css('background','#FFD700');
+                $('tr:odd').css('background','#FFEC8B');
+                $('input').css('background','#FF8C00');
+                $('input#submit').css('background','#FFD700');
+                $('input#data').click(function() {
+                    $(this).datepicker()
+                });   
+                $(':text').focusin(function(){
+                    $(this).css('background-color','yellow'); 
+                    $(this).css('border','1px solid red');
+                    
+                });
 
+                $(':text').blur(function(){
+                    $(this).css('background-color','#FF8C00'); 
+                    $(this).css('border','none');
+                });
+               
+                $('.errors').css('border','1px solid green');
+               
+                
+            });
+
+
+        </script>  
         <meta http-equiv="content-type" content="text/html; charset=iso-8859-2" />
         <meta name="MSSmartTagsPreventParsing" content="TRUE" />
         <meta http-equiv="expires" content="-1" />
@@ -18,7 +47,8 @@ $this->jquery()->enable();
         <meta name="robots" content="all" />
         <meta name="author" content="Owen Briggs" />
         <meta name="description" content="Workarounds for CSS browser issues." />
-    </head><body>
+    </head>
+    <body>
 
 
         <div id="top">
@@ -30,31 +60,34 @@ $this->jquery()->enable();
         <div id="left">
 
             <p>Menu g³ówne</p>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/index/index'?>"><p>Lista</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Licencje</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Oprogramowanie</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Zestawy</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/zestaw/index'?>"><p>Dodaj zestaw</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Edytuj</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Logowanie</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/import/index'?>"><p>Import</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/import/createform'?>"><p>Import forma</p></a>
-            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy'?>"><p>Wyszukiwanie</p></a>
-            
-            
+            <a href ="<?php echo $this->baseUrl() . '/index.php/index/index' ?>"><p>Lista</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy' ?>"><p>Licencje</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy' ?>"><p>Oprogramowanie</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy' ?>"><p>Zestawy</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/zestaw/index' ?>"><p>Dodaj zestaw</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy' ?>"><p>Edytuj</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy' ?>"><p>Logowanie</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/import/index' ?>"><p>Import</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/import/createform' ?>"><p>Import forma</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/lista/systemy' ?>"><p>Wyszukiwanie</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/user/create' ?>"><p>Dodaj usera</p></a>
+            <a href ="<?php echo $this->baseUrl() . '/index.php/user/logout' ?>"><p>Wylogowanie</p></a>
+
+
 
         </div>
 
         <div id="middle">
-            <pre>
-                <?php echo $this->layout()->content; ?>
-            </pre>
-            <div id="right">
+            <?php echo $this->layout()->content; ?>
 
-                <p>1</p>
 
-            </div>
 
+        </div>
+        <div id="right">
+
+            <?php echo $this->layout()->userForm = $this->action('index', 'user'); ?>
+
+        </div>
     </body>
 
 </html>
